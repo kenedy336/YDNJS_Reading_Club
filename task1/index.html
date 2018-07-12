@@ -8,31 +8,19 @@
 </body>
 <script >
     const answers = ['Камінь', 'Ножиці', 'Папір'];
-    var me = Number(prompt("Вкажи свій вибір? (1 - Камінь, 2 - Ножиці, 3 - Папір)")) - 1;
-    var bot = Math.floor(Math.random() * 3);  
-    console.log("Твій вибір: " + answers[me]);
-    console.log("Вибір твердолопого компуктера: " + answers[bot]);
-    switch(me){
-        case 0: 
-            (bot == 0) ? draw() : ((bot == 1) ? youWon() : youLose())
-            break;
-        case 1:
-            (bot == 1) ? draw() : ((bot == 2) ? youWon() : youLose())
-            break;
-        case 2:
-            (bot == 2) ? draw() : ((bot == 0) ? youWon() : youLose())
-            break;
-        default:
-            console.log("Ви ввели якусь дурь.")
-    }
+    let me = Number(prompt("Вкажи свій вибір? (1 - Камінь, 2 - Ножиці, 3 - Папір)")) - 1;
+    let bot = Math.floor(Math.random() * 3);  
+    let text = "Твій вибір: " + answers[me];
+    text += "\nВибір твердолопого компуктера: " + answers[bot];
+    (me == 0 || me == 1 || me == 2) ? ((me == 0 || me == 1) ? ((me == 0) ? ((bot === 0) ? draw() : ((bot === 1) ? youWon() : youLose())) : ((bot === 1) ? draw() : ((bot === 2) ? youWon() : youLose()))) : ((bot === 2) ? draw() : ((bot === 0) ? youWon() : youLose()))) : alert("Ви ввели якусь дурь => " + me);
     function youWon(){
-        alert("Ти переміг, вицюропок!");
+        alert(text + "\nТи переміг, вицюропок!");
     }
     function youLose(){
-        alert("Краще їдь додому, невдаха.");
+        alert(text + "\nКраще їдь додому, невдаха.");
     }
     function draw(){
-        alert("Ніхто не переміг, але обидва програли.")
+        alert(text + "\nНіхто не переміг, але обидва програли.")
     }
 </script> 
 </html>
