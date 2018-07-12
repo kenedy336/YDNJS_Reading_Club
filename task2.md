@@ -6,7 +6,7 @@ https://github.com/azat-io/you-dont-know-js-ru/blob/master/scope%20%26%20closure
 https://github.com/azat-io/you-dont-know-js-ru/blob/master/scope%20%26%20closures/ch4.md
 https://github.com/azat-io/you-dont-know-js-ru/blob/master/scope%20%26%20closures/ch5.md
 
-+ Plus additional documents
++Plus additional documents:
 https://github.com/azat-io/you-dont-know-js-ru/blob/master/scope%20%26%20closures/apA.md
 https://github.com/azat-io/you-dont-know-js-ru/blob/master/scope%20%26%20closures/apB.md
 https://github.com/azat-io/you-dont-know-js-ru/blob/master/scope%20%26%20closures/apC.md
