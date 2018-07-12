@@ -10,31 +10,19 @@
     const answers = ['Камінь', 'Ножиці', 'Папір'];
     let me = Number(prompt("Вкажи свій вибір? (1 - Камінь, 2 - Ножиці, 3 - Папір)")) - 1;
     let bot = Math.floor(Math.random() * 3);  
-    let text = "Твій вибір: " + answers[me];
-    text += "\nВибір твердолопого компуктера: " + answers[bot];
-
+    let text = "Твій вибір: " + answers[me] + "\nВибір твердолопого компуктера: " + answers[bot];
     (me == 0 || me == 1 || me == 2) ? 
         ((me == 0 || me == 1) ? 
             ((me == 0) ? 
                 ((bot === 0) ? 
-                    draw() : ((bot === 1) ? 
-                        youWon() : youLose())) : 
+                    alert(text + "\nНіхто не переміг, але обидва програли.") : ((bot === 1) ? 
+                    alert(text + "\nТи переміг, вицюропок!") : alert(text + "\nКраще їдь додому, невдаха."))) : 
                 ((bot === 1) ? 
-                    draw() : ((bot === 2) ? 
-                        youWon() : youLose()))) : 
+                    alert(text + "\nНіхто не переміг, але обидва програли.") : ((bot === 2) ? 
+                    alert(text + "\nТи переміг, вицюропок!") : alert(text + "\nКраще їдь додому, невдаха.")))) : 
             ((bot === 2) ? 
-            draw() : ((bot === 0) ? 
-                youWon() : youLose()))) : 
+            alert(text + "\nНіхто не переміг, але обидва програли.") : ((bot === 0) ? 
+            alert(text + "\nТи переміг, вицюропок!") : alert(text + "\nКраще їдь додому, невдаха.")))) : 
         alert("Ви ввели якусь дурь => " + me);
-
-    function youWon(){
-        alert(text + "\nТи переміг, вицюропок!");
-    }
-    function youLose(){
-        alert(text + "\nКраще їдь додому, невдаха.");
-    }
-    function draw(){
-        alert(text + "\nНіхто не переміг, але обидва програли.")
-    }
 </script> 
 </html>
