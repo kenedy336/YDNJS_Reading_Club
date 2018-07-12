@@ -11,3 +11,4 @@ https://github.com/azat-io/you-dont-know-js-ru/blob/master/scope%20%26%20closure
 https://github.com/azat-io/you-dont-know-js-ru/blob/master/scope%20%26%20closures/apB.md
 https://github.com/azat-io/you-dont-know-js-ru/blob/master/scope%20%26%20closures/apC.md
 
+Practic: Play with task2_template.html file, add some basic and maybe interesting features
