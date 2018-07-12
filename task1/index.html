@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game</title>
+</head>
+<body>
+
+</body>
+<script >
+    const answers = ['Камінь', 'Ножиці', 'Папір'];
+    var me = Number(prompt("Вкажи свій вибір? (1 - Камінь, 2 - Ножиці, 3 - Папір)")) - 1;
+    var bot = Math.floor(Math.random() * 3);  
+    console.log("Твій вибір: " + answers[me]);
+    console.log("Вибір твердолопого компуктера: " + answers[bot]);
+    switch(me){
+        case 0: 
+            (bot == 0) ? draw() : ((bot == 1) ? youWon() : youLose())
+            break;
+        case 1:
+            (bot == 1) ? draw() : ((bot == 2) ? youWon() : youLose())
+            break;
+        case 2:
+            (bot == 2) ? draw() : ((bot == 0) ? youWon() : youLose())
+            break;
+        default:
+            console.log("Ви ввели якусь дурь.")
+    }
+    function youWon(){
+        alert("Ти переміг, вицюропок!");
+    }
+    function youLose(){
+        alert("Краще їдь додому, невдаха.");
+    }
+    function draw(){
+        alert("Ніхто не переміг, але обидва програли.")
+    }
+</script> 
+</html>
