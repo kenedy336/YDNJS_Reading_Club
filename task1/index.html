@@ -12,7 +12,21 @@
     let bot = Math.floor(Math.random() * 3);  
     let text = "Твій вибір: " + answers[me];
     text += "\nВибір твердолопого компуктера: " + answers[bot];
-    (me == 0 || me == 1 || me == 2) ? ((me == 0 || me == 1) ? ((me == 0) ? ((bot === 0) ? draw() : ((bot === 1) ? youWon() : youLose())) : ((bot === 1) ? draw() : ((bot === 2) ? youWon() : youLose()))) : ((bot === 2) ? draw() : ((bot === 0) ? youWon() : youLose()))) : alert("Ви ввели якусь дурь => " + me);
+
+    (me == 0 || me == 1 || me == 2) ? 
+        ((me == 0 || me == 1) ? 
+            ((me == 0) ? 
+                ((bot === 0) ? 
+                    draw() : ((bot === 1) ? 
+                        youWon() : youLose())) : 
+                ((bot === 1) ? 
+                    draw() : ((bot === 2) ? 
+                        youWon() : youLose()))) : 
+        ((bot === 2) ? 
+            draw() : ((bot === 0) ? 
+                youWon() : youLose()))) : 
+    alert("Ви ввели якусь дурь => " + me);
+
     function youWon(){
         alert(text + "\nТи переміг, вицюропок!");
     }
