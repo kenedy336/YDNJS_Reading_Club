@@ -3,6 +3,15 @@ const list = document.querySelector(".collection");
 const inputText = document.querySelector("#task");
 const clearBtn = document.querySelector('.clear-tasks').addEventListener("click", btnClear);
 
+document.querySelector('.collection').addEventListener("click", deleteItem);
+
+
+function deleteItem(e){
+  if(e.target.parentElement.classList.contains('delete-item')){
+    e.target.parentElement.parentElement.remove();
+  }
+}
+
 function btnClear(e){
   e.preventDefault();
   list.innerHTML = "";
@@ -20,10 +29,7 @@ function btnClickAdd(e) {
   inputText.value = "";
 }
 
-function deleteItem(id){
-  list.children[id].style.background = '#aab4c4';
-  list.children[id].style.textDecoration = 'line-through';
-}
+
 
 
 function elementModule() {
