@@ -5,3 +5,4 @@
   - https://github.com/azat-io/you-dont-know-js-ru/blob/master/scope%20%26%20closures/ch2.md
   
 Розробити гру "Камінь, ножниці, папір" без DOM бажано з використанням hoisting(всплытия)"
+  
