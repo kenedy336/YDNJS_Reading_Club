@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
   <title>Book list</title>
   <style>
     img {
       width: 60px;
       height: 70px;
     }
+
+    i.material-icons {
+      position: relative;
+      top: -20px;
+      left: 18px;
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
     <div class="row">
@@ -35,17 +45,16 @@
                   <input type="text" name="isbn" id="isbn">
                   <label for="isbn">ISBN#</label>
                 </div>
-                <div class = "file-field col s12 input-field">
-                  <div class = "btn">
-                     <span>Browse</span>
-                     <input type = "file" multiple id="file"/>
+                <div class="file-field col s12 input-field">
+                  <div class="btn">
+                    <span>Browse</span>
+                    <input type="file" multiple id="file" />
                   </div>
-                  
-                  <div class = "file-path-wrapper">
-                     <input class = "file-path validate" type = "text"
-                        placeholder = "Upload book cover" />
+
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Upload book cover" />
                   </div>
-               </div>    
+                </div>
               </form>
             </div>
           </div>
@@ -68,13 +77,6 @@
                     </tr>
                   </thead>
                   <tbody id="book-list">
-                    <tr>
-                      <td>Title Example</td>
-                      <td>Author Example</td>
-                      <td>ISBN Example</td>
-                      <td><img src="https://images.gr-assets.com/books/1508978489l/35871486.jpg"></td>
-                      <td><a href="#" class="delete">X</a><a></a></td>
-                    </tr>
                   </tbody>
                 </table>
               </li>
@@ -85,12 +87,9 @@
       </div>
     </div>
   </div>
-<img id="test"/>
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script src="app.js"></script>
 </body>
+
 </html>
