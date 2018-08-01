@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
   <title>Book list</title>
   <style>
     img {
@@ -14,6 +16,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <div class="row">
@@ -24,36 +27,38 @@
             <div class="row">
               <form id="task-form">
                 <div class="input-field col s12">
-                  <input type="text" name="book" id="book">
+                  <input type="text" name="book" id="book" class="book">
                   <label for="book">Title</label>
                 </div>
                 <div class="input-field col s12">
-                  <input type="text" name="author" id="author">
+                  <input type="text" name="author" id="author" class="author">
                   <label for="author">Author</label>
                 </div>
                 <div class="input-field col s12">
-                  <input type="text" name="isbn" id="isbn">
+                  <input type="text" name="isbn" id="isbn" class="isbn">
                   <label for="isbn">ISBN#</label>
                 </div>
-                <div class = "file-field col s12 input-field">
-                  <div class = "btn">
-                     <span>Browse</span>
-                     <input type = "file" multiple />
+                <div class="file-field col s12 input-field">
+                  <div class="btn">
+                    <span>Browse</span>
+                    <input type="file" multiple / class="cover">
                   </div>
-                  
-                  <div class = "file-path-wrapper">
-                     <input class = "file-path validate" type = "text"
-                        placeholder = "Upload book cover" />
+
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Upload book cover" />
                   </div>
-               </div>    
+                </div>
+                <div class="input-field col s12">
+                  <button class="waves-effect waves-light btn submit">Submit</button>
+                </div>
               </form>
             </div>
           </div>
           <div class="card-action">
-            <h5 id="task-title">Tasks</h5>
+            <h5 id="task-title">Books</h5>
             <div class="input-field col s12">
               <input type="text" name="filter" id="filter">
-              <label for="filter">Filter Tasks</label>
+              <label for="filter">Filter Books</label>
             </div>
             <ul class="collection">
               <li class="collection-item">
@@ -72,8 +77,13 @@
                       <td>Title Example</td>
                       <td>Author Example</td>
                       <td>ISBN Example</td>
-                      <td><img src="https://images.gr-assets.com/books/1508978489l/35871486.jpg"></td>
-                      <td><a href="#" class="delete">X</a><a></a></td>
+                      <td>
+                        <img src="https://images.gr-assets.com/books/1508978489l/35871486.jpg">
+                      </td>
+                      <td>
+                        <a href="#" class="delete">X</a>
+                        <a></a>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -86,11 +96,9 @@
     </div>
   </div>
 
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script src="app.js"></script>
 </body>
+
 </html>
