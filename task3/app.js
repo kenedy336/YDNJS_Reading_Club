@@ -1,6 +1,6 @@
 let model = new Model();
 let view = new View(
-  { bookList: "#book-list" },
+  { bookList: "#book-list", clearTasks: ".clear-tasks" },
   {
     title: "#book",
     author: "#author",

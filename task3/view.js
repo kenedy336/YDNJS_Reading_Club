@@ -1,6 +1,11 @@
 class View {
-  constructor({ bookList }, { title, author, isbn, cover, submit }) {
+  constructor(
+    { bookList, clearTasks },
+    { title, author, isbn, cover, submit }
+  ) {
     this.bookList = $(bookList);
+    this.clearTasks = $(clearTasks);
+
     this.input = {
       title: $(title),
       author: $(author),
@@ -12,7 +17,6 @@ class View {
   renderRecord({ record, index }) {
     appendRecord(this.bookList, record, index);
   }
-
   renderRecordsList(list) {
     const fragment = document.createDocumentFragment();
     list.forEach((record, index) => appendRecord(fragment, record, index));
@@ -20,11 +24,11 @@ class View {
     this.bookList.appendChild(fragment);
   }
   removeRecord(index) {
-    const element = this.bookList.childNodes[index];
+    const element = this.bookList.children[index];
     this.bookList.removeChild(element);
   }
   removeAllReccords() {
-    this.bookList.innerHtml = "";
+    this.bookList.innerHTML = "";
   }
   getNewRecordData() {
     const input = this.input;
@@ -44,13 +48,13 @@ function appendRecord(list, record, index) {
 
 function createRecordFromTemplate({ title, author, isbn, imgSrc }, index) {
   const img = `<img src="${imgSrc}">`;
-  const deleteButton = `<a href="#" class="delete">X</a>`;
+  const deleteButton = `<a href="#" data-book-index="${index}" class="delete">X</a>`;
   const record = `<td>${title}</td>
                     <td>${author}</td>
                     <td>${isbn}</td>
                     <td>${img}</td>
                     <td>${deleteButton}</td>`;
-  const tableRow = `<tr data-book-index="${index}">${record}</tr>`;
+  const tableRow = `<tr>${record}</tr>`;
   return tableRow;
 }
 
