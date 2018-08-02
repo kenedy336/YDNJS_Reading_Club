@@ -1,11 +1,11 @@
 let model = new Model();
 let view = new View(
-  { bookList: "#book-list", clearTasks: ".clear-tasks" },
+  { bookList: "#book-list", clearTasks: ".clear-tasks", filter: "#filter" },
   {
     title: "#book",
     author: "#author",
     isbn: "#isbn",
-    cover: "#cover",
+    cover: ".cover",
     submit: ".submit"
   }
 );

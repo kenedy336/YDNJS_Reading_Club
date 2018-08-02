@@ -25,6 +25,12 @@ class Model {
     this.books.length = 0;
     this.notify("CLEAR");
   }
+  findBy(query){
+    const list = this.books.filter( book =>  Object.keys(book).some( key => book[key] == query))
+    const result =  list.length ? list : this.books;
+    this.notify("FIND", result);
+  }
+
   notify(event, payload) {
     this.listeners
       .filter(listener => listener.event == event)
