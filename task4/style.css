@@ -1,0 +1,30 @@
+div {
+  padding: 10px;
+  width: 430px;
+  background: #baecfc;
+}
+.attack {
+  width: 410px;
+  background: #ea797c;
+}
+.defend {
+  width: 410px;
+  background: #ea5226;
+}
+.health {
+  width: 430px;
+}
+.health div {
+  width: 410px;
+}
+ul {
+  list-style-type: none;
+  height: 150px;
+  overflow: auto;
+}
+.listLog {
+  background: #ffffff;
+}
+li:nth-child(odd){
+  background: #c3c3c3;
+}
